@@ -1,0 +1,34 @@
+{
+  "name": "30seconds-typescript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:snakeUni/30seconds-typescript.git",
+  "author": "Fox <1025687605@qq.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.25.0",
+    "@typescript-eslint/parser": "^2.25.0",
+    "commitlint": "^8.3.5",
+    "eslint": "^6.8.0",
+    "husky": "^4.2.3",
+    "jest": "^25.1.0",
+    "lint-staged": "^10.0.8",
+    "prettier": "^2.0.2",
+    "ts-jest": "^25.2.1",
+    "typescript": "^3.8.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "js/*.js": [
+      "prettier --write"
+    ],
+    "ts/*.ts": [
+      "prettier --write"
+    ]
+  }
+}

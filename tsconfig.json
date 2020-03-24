@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "declarationDir": "./dist",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "target": "es5",
+    "lib": ["es7"],
+    "module": "esnext",
+    "moduleResolution": "node"
+  },
+  "include": ["ts"],
+  "exclude": ["node_modules"]
+}
