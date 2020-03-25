@@ -3,12 +3,25 @@
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"],
   "extends": [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended"
+    "airbnb",
+    "prettier",
+    "plugin:react/recommended",
+    "plugin:import/typescript",
+    "prettier/react"
   ],
   "env": {
     "browser": true,
-    "node": true
-  }
+    "node": true,
+    "es6": true
+  },
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "rules": {
+        "@typescript-eslint/no-unused-vars": [2, { "args": "none" }],
+        "no-unused-expressions": "off",
+        "@typescript-eslint/no-unused-expressions": 2
+      }
+    }
+  ]
 }
